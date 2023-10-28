@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Customer Management System</title>
+</head>
+<body>
+    <h1>Login</h1>
+    <form>
+        Username: <input type="text" name="username"><br>
+        Password: <input type="password" name="password"><br>
+        <input type="submit" value="Login">
+    </form>
+
+    <h2>List of Customers</h2>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Action</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>John Doe</td>
+            <td>johndoe@example.com</td>
+            <td>
+                <button onclick="editCustomer(1)">Edit</button>
+                <button onclick="deleteCustomer(1)">Delete</button>
+            </td>
+        </tr>
+        <!-- More rows for other customers would go here -->
+    </table>
+
+    <h2>Create a New Customer</h2>
+    <form>
+        Name: <input type="text" name="newName"><br>
+        Email: <input type="email" name="newEmail"><br>
+        <input type="submit" value="Create" onclick="createCustomer()">
+    </form>
+
+    <script>
+        function editCustomer(customerId) {
+            // Functionality to edit a specific customer
+            alert("Editing customer with ID " + customerId);
+        }
+
+        function deleteCustomer(customerId) {
+            // Functionality to delete a specific customer
+            alert("Deleting customer with ID " + customerId);
+        }
+
+        function createCustomer() {
+            // Functionality to create a new customer
+            alert("Creating a new customer");
+        }
+    </script>
+</body>
+</html>
